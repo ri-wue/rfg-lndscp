@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+                Text("Refugio Landscaping")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(.verde)
+                    .padding()
+                Spacer()
+            }
+            HStack{
+                Button("Aprieta el Botón!") {
+                    print("Boo! 👻")
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+                .buttonBorderShape(.capsule)
+                .tint(.tuna)
+            }
         }
-        .padding()
     }
 }
 
